@@ -4,7 +4,7 @@ node('docker-node') {
     checkout scm
   }
   stage('build'){
-    docker.withRegistry('https://pocvivomsdip.azurecr.io') {
+    docker.withRegistry('20.231.125.187:8182') {
       def dockerImage = docker.build("$name_img")
       dockerImage.push()
     }
