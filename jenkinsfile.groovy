@@ -9,7 +9,8 @@ node('docker-node') {
       dockerImage.push()
     }
   }
-  stage('cleanup'){
-    sh 'docker rmi -f $name_img'   
+  stage('deploy'){
+    
   }
+
 }
