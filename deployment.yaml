@@ -21,6 +21,11 @@ spec:
         image: registry.devops.7f8254f4188647b4be19.eastus.aksapp.io/msteste:1.0.2
         ports:
         - containerPort: 8080
+        env:
+          - name: KAFKA_SERVER
+            value: "kafka.kafka.svc.cluster.local"
+          - name: KAFKA_PORT
+            value: "9092"
 ---
 apiVersion: v1
 kind: Service
