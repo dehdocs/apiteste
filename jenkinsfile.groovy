@@ -4,7 +4,7 @@ node('docker-node') {
     checkout scm
   }
   stage('build'){
-    docker.withRegistry('https://registry.devops.7f8254f4188647b4be19.eastus.aksapp.io', 'nexus') {
+    docker.withRegistry('http://20.231.125.187:8182', 'nexus') {
       def dockerImage = docker.build("$name_img")
       dockerImage.push()
     }
