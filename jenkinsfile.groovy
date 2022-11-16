@@ -1,5 +1,5 @@
 node('docker-node') {
-  def name_img = "msteste:1.0.3"
+  def name_img = "msteste:1.0.5"
   stage('Prepare') {
     checkout scm
   }

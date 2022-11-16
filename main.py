@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from kafka import KafkaProducer
-import os, random
+import os
 
 app = FastAPI()
 kafka_server = os.getenv('KAFKA_SERVER')
@@ -11,6 +11,5 @@ producer = KafkaProducer(bootstrap_servers=[kafka_url])
 
 @app.get("/")
 async def root():
-    number = random.randint(0,9999999)
-    producer.send('Api', number)
-    return {"number": number}
+    producer.send('Api', b'teste de mensagem')
+    return {"number":'mensagem'}

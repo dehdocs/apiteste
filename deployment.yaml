@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: demo-api
-        image: registry.devops.7f8254f4188647b4be19.eastus.aksapp.io/msteste:1.0.3
+        image: registry.devops.7f8254f4188647b4be19.eastus.aksapp.io/msteste:1.0.5
         ports:
         - containerPort: 8080
         env:
