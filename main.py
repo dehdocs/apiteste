@@ -11,5 +11,5 @@ producer = KafkaProducer(bootstrap_servers=[kafka_url])
 
 @app.get("/")
 async def root():
-    producer.send('Api', b'teste de mensagem')
+    producer.send('synctopic', b'teste de mensagem')
     return {"number":'mensagem'}
